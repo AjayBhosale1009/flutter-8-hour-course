@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'home_page.dart';
+import 'package:flutter_8_hour_course/screens/login_screen.dart';
+import 'screens/home_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,7 +12,15 @@ class MyApp extends StatelessWidget {
         SystemUiOverlayStyle(statusBarColor: Colors.transparent));
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      themeMode: ThemeMode.light,
+      theme: ThemeData(primarySwatch: Colors.deepPurple),
+      darkTheme:
+          ThemeData(brightness: Brightness.dark, primaryColor: Colors.amber),
+      initialRoute: "/home",
+      routes: {
+        "/": (context) => LoginScreen(),
+        "/home": (context) => HomePage(),
+      },
     );
   }
 }

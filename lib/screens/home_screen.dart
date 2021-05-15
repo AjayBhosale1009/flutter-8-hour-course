@@ -16,7 +16,7 @@ class HomePage extends StatelessWidget {
         child: Container(
           child: Text(
             "My name is $name and I am $age years old!",
-            style: TextStyle(fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 18),
           ),
         ),
       ),
